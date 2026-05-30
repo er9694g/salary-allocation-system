@@ -1,0 +1,19 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# SQLite
+backend/db/data.db
+backend/db/data.db-shm
+backend/db/data.db-wal
+
+# Environment
+.env
+backend/.env
+
+# Vite build output
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
