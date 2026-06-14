@@ -40,7 +40,7 @@ npm install
 ```bash
 cd backend
 npm start
-# ✓ Server running on http://localhost:5000
+# ✓ Server running on http://localhost:5001
 # ✓ Database initialized
 ```
 
@@ -57,10 +57,10 @@ npm run dev
 
 ## ⚠️ macOS 上 port 5000 被佔用
 
-macOS Monterey 以後，AirPlay Receiver 佔用 port 5000。有兩種解法：
+macOS Monterey 以後，AirPlay Receiver 佔用 port 5000，因此本專案預設改用 **5001**。若 5001 也被佔用，有兩種解法：
 
-**解法 A（建議）：關閉 AirPlay Receiver**
-系統設定 → 一般 → AirDrop 與接力 → 關閉「AirPlay 接收器」
+**解法 A：關閉 AirPlay Receiver**
+系統設定 → 一般 → AirDrop 與接力 → 關閉「AirPlay 接收器」後，可改回 port 5000
 
 **解法 B：改用其他 port**
 

@@ -12,7 +12,7 @@ const DEFAULT_VAR = JSON.stringify({
   expense: [
     { id: 'var_exp_1', name: '信用卡費用', amount: 0 },
   ],
-  toFamily: 19000,
+  toFamily: 0,
   previousMonthPaid: 0,
 });
 
@@ -88,11 +88,11 @@ function initDB() {
     ).run('config_default', '預設配置', 1, DEFAULT_VAR, now, now);
 
     const defaultItems = [
-      { id: 'item_1', name: '保險費',       type: 'expense',  amount: 5747,  accountName: '保險帳戶', order: 1 },
-      { id: 'item_2', name: '個人定期定額', type: 'expense',  amount: 10000, accountName: '投資帳戶', order: 2 },
-      { id: 'item_3', name: '給媽媽',       type: 'expense',  amount: 5000,  accountName: '媽媽帳戶', order: 3 },
-      { id: 'item_4', name: '小孩帳戶',     type: 'transfer', amount: 20000, accountName: '小孩帳戶', order: 4 },
-      { id: 'item_5', name: '共同定期定額', type: 'info',     amount: 14000, accountName: 'N/A',      order: 5 },
+      { id: 'item_1', name: '保險費',       type: 'expense',  amount: 0, accountName: '保險帳戶', order: 1 },
+      { id: 'item_2', name: '個人定期定額', type: 'expense',  amount: 0, accountName: '投資帳戶', order: 2 },
+      { id: 'item_3', name: '其他支出',     type: 'expense',  amount: 0, accountName: '',          order: 3 },
+      { id: 'item_4', name: '轉帳項目',     type: 'transfer', amount: 0, accountName: '',          order: 4 },
+      { id: 'item_5', name: '共同定期定額', type: 'info',     amount: 0, accountName: 'N/A',       order: 5 },
     ];
     const insertItem = database.prepare(
       'INSERT INTO config_items (id, config_id, name, type, amount, account_name, is_enabled, sort_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
